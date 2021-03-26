@@ -122,12 +122,14 @@ pub mod pallet {
     pub trait Config: frame_system::Config + pallet_treasury::Config {
 
         /// Maximum acceptable reason length.
+        #[pallet::constant]
         type MaximumReasonLength: Get<u32>;
 
         /// The overarching event type.
         type Event: From<Event<Self>> + IsType<<Self as frame_system::Config>::Event>;
 
         /// The amount held on deposit per byte within the tip report reason or bounty description.
+        #[pallet::constant]
         type DataDepositPerByte: Get<BalanceOf<Self>>;
 
         /// Origin from which tippers must come.
@@ -136,12 +138,15 @@ pub mod pallet {
         type Tippers: Contains<Self::AccountId> + ContainsLengthBound;
 
         /// The period for which a tip remains open after is has achieved threshold tippers.
+        #[pallet::constant]
         type TipCountdown: Get<Self::BlockNumber>;
 
         /// The percent of the final tip which goes to the original reporter of the tip.
+        #[pallet::constant]
         type TipFindersFee: Get<Percent>;
 
         /// The amount held on deposit for placing a tip report.
+        #[pallet::constant]
         type TipReportDepositBase: Get<BalanceOf<Self>>;
 
         /// Weight information for extrinsics in this pallet.
