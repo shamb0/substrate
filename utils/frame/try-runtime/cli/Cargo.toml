@@ -16,7 +16,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 clap = { version = "3.1.18", features = ["derive"] }
 log = "0.4.17"
 parity-scale-codec = "3.0.0"
-serde = "1.0.136"
+serde = "1.0.143"
 zstd = { version = "0.11.2", default-features = false }
 remote-externalities = { version = "0.10.0-dev", path = "../../remote-externalities" }
 jsonrpsee = { version = "0.15.1", default-features = false, features = ["ws-client"] }
