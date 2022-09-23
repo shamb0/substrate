@@ -55,7 +55,7 @@ finality-grandpa = { version = "0.16.0", features = [
 	"derive-codec",
 	"test-helpers",
 ] }
-serde = "1.0.136"
+serde = "1.0.145"
 tempfile = "3.1.0"
 tokio = "1.17.0"
 sc-network = { version = "0.10.0-dev", path = "../network" }
